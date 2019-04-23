@@ -1,0 +1,41 @@
+/* Audio: Remove big play button (leave only the button in controls). */
+.video-js.vjs-audio .vjs-big-play-button {
+  display: none;
+}
+/* Audio: Make the controlbar visible by default */
+.video-js.vjs-audio .vjs-control-bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* Make player height minimum to the controls height so when we hide video/poster area the controls are displayed correctly. */
+.video-js.vjs-audio {
+  min-height: 3em;
+}
+/* In case of error reset height to the default (otherwise no aspect ratio is available and height becomes 0). */
+.video-js.vjs-error {
+  height: 150px;
+}
+/* Minimum height for videos should not be less than the size of play button. */
+.mediaplugin_videojs video {
+  min-height: 32px;
+}
+
+.divToScroll{   
+    background-color: #F5F5F5;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px 0 4px 0;
+    color: #3B3C3E;
+    font-size: 16px;
+    font-weight: bold;
+    left: -1px;
+    padding: 10px 7px 5px;
+}
+
+.divWithScroll{
+    height:300px;
+    overflow:scroll;
+    overflow-x:hidden;
+    line-height: 2em;
+}
